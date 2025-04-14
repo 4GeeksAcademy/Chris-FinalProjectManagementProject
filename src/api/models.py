@@ -112,7 +112,6 @@ class Project(db.Model):
 
 class Invoice(db.Model):
     id: Mapped[int] = mapped_column(Integer, primary_key=True)
-    invoice_number: Mapped[str] = mapped_column(String(50), unique=True, nullable=False)
     date_issued: Mapped[str] = mapped_column(DateTime, nullable=False)
     date_due: Mapped[str] = mapped_column(DateTime, nullable=False)
     client: Mapped[str] = mapped_column(String(50), nullable=False)  # Client name
@@ -125,7 +124,6 @@ class Invoice(db.Model):
     def serialize(self):
         return {
             "id": self.id,
-            "invoice_number": self.invoice_number,
             "date_issued": str(self.date_issued),
             "date_due": str(self.date_due),
             "client": self.client,
