@@ -144,7 +144,7 @@ class Invoice(db.Model):
 #         Integer, db.ForeignKey("project.id"), nullable=False)
 #     assignee_id: Mapped[int] = mapped_column(
 #         Integer, db.ForeignKey("freelancer.id"), nullable=False)
-#     due_date: Mapped[str] = mapped_column(DateTime, nullable=False)
+#     due_date: Mapped[str] = mapped_column(DateTime, nullable=Fals  e)
 #     cost: Mapped[float] = mapped_column(Float, nullable=False)
 
 #     def serialize(self):
