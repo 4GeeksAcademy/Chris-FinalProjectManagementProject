@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from "react";
-import API from "../api";
+import useGlobalReducer from "../hooks/useGlobalReducer";
 
-function Clients() {
+
+export const Client = () => {
+  const{store }=useGlobalReducer()
   const [clients, setClients] = useState([]);
 
   useEffect(() => {
@@ -22,6 +24,4 @@ function Clients() {
       </ul>
     </div>
   );
-}
-
-export default Clients;
+};

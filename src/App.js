@@ -9,6 +9,7 @@ import ProjectForm from "./components/ProjectForm";
 import Invoices from "./components/Invoices";
 import InvoiceForm from "./components/InvoiceForm";
 import AdminDashboard from "./components/AdminDashboard";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import './App.css';  
 
 
