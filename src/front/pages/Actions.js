@@ -9,10 +9,10 @@ const handleResponse = async (response) => {
   }
   return response.json();
 };
-export const fetcClients = async (dispatch) => {
+export const fetchClients = async (dispatch) => {
     try{
         dispatch({type:"load_clients"})
 
-        const response=await fetch(`${process.env.VITE_BACKEND_URL}/api/clients`)
+        const response=await fetch(`${process.env.VITE_BACKEND_URL}/api/clients`)  
     }
 };

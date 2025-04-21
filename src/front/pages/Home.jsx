@@ -7,12 +7,35 @@ export const Home = () => {
 
 	const { store, dispatch } = useGlobalReducer()
 
+	const containerStyle = {
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        flexDirection: "column",
+        minHeight: "100vh",
+        padding: "2rem",
+        background: "linear-gradient(to right, #74ebd5, #acb6e5)"
+    };
+
 
 
 
 	return (
-		<div className="text-center mt-5">
-			<SignUpPage />
+		<div className="home-container">
+			<SignUpPage /> 
+			<style>
+                {`
+                    .home-container {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        flex-direction: column;
+                        min-height: 100vh;
+                        padding: 2rem;
+                        background: linear-gradient(to right, #74ebd5, #acb6e5);
+                    }
+                `}
+            </style>
 		</div>
 	);
 }; 
